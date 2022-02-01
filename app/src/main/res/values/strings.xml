@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">NasaBrowser</string>
+    <string name="made_by">Code made by Felipe Cuervo</string>
 </resources>

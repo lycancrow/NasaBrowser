@@ -42,13 +42,26 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/nasa_recycler_view"
-        android:layout_width="397dp"
-        android:layout_height="600dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="407dp"
+        android:layout_height="514dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/browser" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="202dp"
+        android:layout_height="43dp"
+        android:text="@string/made_by"
+        android:fontFamily="@font/displayfont"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nasa_recycler_view" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
