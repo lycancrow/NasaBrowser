@@ -5,20 +5,113 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/marsbackground"
-    android:backgroundTintMode="multiply"
     android:backgroundTint="@color/delailedImageTint"
+    android:backgroundTintMode="multiply"
     tools:context=".ui.details.Detailed_Image">
 
+    <!--Columns-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/detailedColumnBegin1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/detailedColumnEnd1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/detailedColumnBegin2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/detailedColumnEnd2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/detailedColumnBegin3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.01" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/detailedColumnEnd3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.99" />
+
+    <!--Rows-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/detailedRowBegin1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.01" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/detailedRowEnd1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/detailedRowBegin2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.22" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/detailedRowEnd2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.57" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/detailedRowBegin3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.63" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/detailedRowEnd3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.86" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/detailedRowBegin4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/detailedRowEnd4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <!--Components-->
     <ScrollView
-        android:layout_width="411dp"
-        android:layout_height="101dp"
-        app:layout_constraintBottom_toTopOf="@+id/nasaImageDetailed"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.431">
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@+id/detailedRowBegin1"
+        app:layout_constraintBottom_toBottomOf="@+id/detailedRowEnd1"
+        app:layout_constraintStart_toStartOf="@+id/detailedColumnBegin1"
+        app:layout_constraintEnd_toEndOf="@+id/detailedColumnEnd1"
+        android:foregroundGravity="center"
+        >
 
         <TextView
             android:id="@+id/imageTitle"
@@ -39,24 +132,21 @@
 
     <ImageView
         android:id="@+id/nasaImageDetailed"
-        android:layout_width="354dp"
-        android:layout_height="246dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.338"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@+id/detailedRowBegin2"
+        app:layout_constraintBottom_toBottomOf="@+id/detailedRowEnd2"
+        app:layout_constraintStart_toStartOf="@+id/detailedColumnBegin1"
+        app:layout_constraintEnd_toEndOf="@+id/detailedColumnEnd1"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ScrollView
-        android:layout_width="403dp"
-        android:layout_height="170dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nasaImageDetailed"
-        app:layout_constraintVertical_bias="0.324">
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@+id/detailedRowBegin3"
+        app:layout_constraintBottom_toBottomOf="@+id/detailedRowEnd3"
+        app:layout_constraintStart_toStartOf="@+id/detailedColumnBegin3"
+        app:layout_constraintEnd_toEndOf="@+id/detailedColumnEnd3">
 
         <TextView
             android:id="@+id/imageDescription"
@@ -78,19 +168,17 @@
 
     <TextView
         android:id="@+id/imageDate"
-        android:layout_width="250dp"
-        android:layout_height="35dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:fontFamily="@font/displayfont"
         android:gravity="center"
         android:text="TextView"
         android:textSize="24sp"
         android:textColor="@color/genericGreen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.955" />
+        app:layout_constraintTop_toTopOf="@+id/detailedRowBegin4"
+        app:layout_constraintBottom_toBottomOf="@+id/detailedRowEnd4"
+        app:layout_constraintStart_toStartOf="@+id/detailedColumnBegin2"
+        app:layout_constraintEnd_toEndOf="@+id/detailedColumnEnd2" />
 
 
 

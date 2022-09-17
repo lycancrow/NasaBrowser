@@ -16,7 +16,8 @@
         android:theme="@style/Theme.NasaBrowser">
 
 
-        <activity android:name=".ui.view.Splash">
+        <activity android:name=".ui.view.Splash"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
